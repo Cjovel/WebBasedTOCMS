@@ -200,13 +200,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
+      <img src="img/3-removebg-preview.png" width="50 px" style='float: left'>
+      <a class="navbar-brand" href="#myPage">Collections Management System</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ route('homepage.index')}}">Home</a></li>
         <li><a href="{{ route('homepage.aboutus')}}">About</a></li>
         <li><a href="{{ route('homepage.contactus')}}">Contact Us</a></li>
+        <li><a href="http://127.0.0.1:8000/login">Login</a></li>
       </ul>
     </div>
   </div>
@@ -227,7 +229,7 @@
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Copyright &copy; 2024. <a href="#" title="Visit the website!">www.WebBaseTOCMS.net</a>. All rights reserved.</p>
+  <p>Copyright &copy; 2024. <a href="#" title="Visit the website!">www.WebBasedEOCMS.net</a>. All rights reserved.</p>
 </footer>
 
 <script>

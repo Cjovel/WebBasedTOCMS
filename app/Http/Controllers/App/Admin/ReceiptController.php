@@ -5,6 +5,7 @@ namespace App\Http\Controllers\app\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Receipt;
+use App\Models\Fee;
 
 class ReceiptController extends Controller
 {
@@ -20,19 +21,22 @@ class ReceiptController extends Controller
         return view('app.admin.receipts.create');
     }
 
-    public function store(Request $request)
+    public function store(Fee $fee, Request $request)
     {
         $data = $request->validate([
-            'amountdue' => 'required',
-            'amountpaid' => 'required',
-            'change' => 'required',
+            'Shortname' =>'required',
+            'AmountDue' => 'required',
+            'AmountPaid' => 'required',
+            'Change' => 'required',
         ]);
 
-        $newReceipt = Receipt::create($data);
+        $newReceipt = $fee->receipts()->create($data);
 
-        return redirect(route('app.admin.receipts.index'))->with('status', 'Receipt has been succesfully added!');
+        return redirect(route('home.show', ['fee' => $fee]));
     }
+    
 
+ 
     public function destroy(Request $request, Receipt $receipt)
     {
         $receipt->delete();
@@ -48,6 +52,7 @@ class ReceiptController extends Controller
     public function update(Request $request, Receipt $receipt)
     {
         $data = $request->validate([
+            'shortname' => 'required',
             'amountdue' => 'required',
             'amountpaid' => 'required',
             'change' => 'required',

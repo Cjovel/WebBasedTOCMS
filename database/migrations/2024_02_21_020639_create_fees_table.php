@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('fees', function (Blueprint $table) {
             $table->id();
-            $table->string('shortname');
+            $table->string('Shortname');
             $table->string('Description');
             $table->double('AmountDue');
             $table->double('AmountBalance');

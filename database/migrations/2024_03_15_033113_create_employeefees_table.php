@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('employee-fees', function (Blueprint $table) {
-            $table->id('id_deped');
-            $table->integer('fee_id');
-            $table->integer('receipt_id');
-            $table->string('Status');
+        Schema::create('employeefees', function (Blueprint $table) {
+            $table->id();
+            $table->integer('Id_Deped');
+            $table->integer('Fee_Id');
+            $table->integer('Receipt_Id');
+            $table->String('Status');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employee-fees');
+        Schema::dropIfExists('employeefees');
     }
 };

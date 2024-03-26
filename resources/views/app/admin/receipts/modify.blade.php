@@ -21,6 +21,18 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group">
+                        <label for="#">Shortname</label>
+                        <input type="text" name="shortname" class="form-control" 
+                            value="{{old('shortname')}}"
+                            class="@error('shortname') is-invalid @enderror"
+                            placeholder="Enter Shortname">
+                         @error('shortname')
+                            <span class="text-danger"><small>{{ $message }}</small></span>
+                        @enderror   
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
                         <label for="#">Amount Due</label>
                         <input type="text" name="amountdue" class="form-control" 
                             value="{{old('amountdue')}}"

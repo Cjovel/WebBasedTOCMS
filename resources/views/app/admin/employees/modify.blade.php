@@ -56,8 +56,8 @@
                         <label for="gender">Gender</label>
                         <select name="gender" class="form-control @error('gender') is-invalid @enderror" id="gender" value="{{old('gender')}}">
                             <option value="">--- please select ----</option>
-                            <option value="1" {{old('gender') == 1 ? "selected" : ""}}>Male</option>
-                            <option value="2" {{old('gender') == 2 ? "selected" : ""}}>Female</option>
+                            <option>Male</option>
+                            <option>Female</option>
                          </select>
                         @error('type')
                             <span class="invalid-feedback" role="alert">
@@ -69,7 +69,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="#">Birthdate</label>
-                        <input type="text" name="name" class="form-control" 
+                        <input type="date" name="birthdate" class="form-control" 
                             value="{{old('birthdate')}}"
                             class="@error('birthdate') is-invalid @enderror"
                             placeholder="Enter Birthdate">
@@ -83,9 +83,9 @@
                         <label for="type">Type</label>
                         <select name="type" class="form-control @error('type') is-invalid @enderror" id="type" value="{{old('type')}}">
                             <option value="">--- please select ----</option>
-                            <option value="1" {{old('type') == 1 ? "selected" : ""}}>Admin</option>
-                            <option value="2" {{old('type') == 2 ? "selected" : ""}}>Teaching</option>
-                            <option value="3" {{old('type') == 3 ? "selected" : ""}}>Non-Teaching</option>
+                            <option>Admin</option>
+                            <option>Teaching</option>
+                            <option>Non-Teaching</option>
                          </select>
                         @error('level')
                             <span class="invalid-feedback" role="alert">
@@ -97,11 +97,11 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label for="#">MembershipDate</label>
-                        <input type="text" name="membershipdate" class="form-control" 
+                        <input type="date" name="membershipdate" class="form-control" 
                             value="{{old('membershipdate')}}"
                             class="@error('membershipdate') is-invalid @enderror"
                             placeholder="Enter MembershipDate">
-                         @error('birthdate')
+                         @error('membershipdate')
                             <span class="text-danger"><small>{{ $message }}</small></span>
                         @enderror   
                     </div>

@@ -59,7 +59,7 @@ class EmployeeController extends Controller
             'membershipdate' => 'required'
         ]);
 
-        $department->update($data);
+        $employee->update($data);
 
         return redirect(route('app.admin.employees.index'))->with('status', 'Employee has been succesfully updated!');
     }

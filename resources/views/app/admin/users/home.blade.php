@@ -6,11 +6,12 @@
     <h1>Users</h1>
 @stop
 
+@section('content')
 <div class='card'>
         <div class="card-header">
             <h3 class="card-title">User list</h3>
             <div class="card-tools">
-                <a href="{{route('app.admin.users.create')}}" class="btn btn-primary form-control float-right">Add new user</a>
+                <a href="{{route('admin.users.create')}}" class="btn btn-primary form-control float-right">Add new user</a>
             </div>
         </div>
         <div class="card-body">
@@ -38,9 +39,9 @@
                             <td>{{$user->role->getLevel()}}</td>
                             <td>{{$user->role->getStatus()}}</td>
                             <td>
-                                <a href="{{route('app.admin.users.reset', $user)}} " class="btn btn-primary" title="Reset Password"><i class="fas fa-key"></i></a>&nbsp;
-                                <a href="{{route('app.admin.users.modify', $user)}} " class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
-                                <a href="{{route('app.admin.users.delete', $user)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                <a href="{{route('admin.users.reset', $user)}} " class="btn btn-primary" title="Reset Password"><i class="fas fa-key"></i></a>&nbsp;
+                                <a href="{{route('admin.users.modify', $user)}} " class="btn btn-warning"><i class="fas fa-edit"></i></a>&nbsp;
+                                <a href="{{route('admin.users.delete', $user)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                             </td>
                         </tr>
                     @endforeach
@@ -52,7 +53,7 @@
 
 @section('footer')
     Copyright &copy; 2024. <strong>CBRJ Admin</strong>. All rights reserved.
-@stop
+@endsection
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">

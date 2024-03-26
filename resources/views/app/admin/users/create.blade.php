@@ -8,7 +8,7 @@
 
 @section('content')
     <div class='card'>
-        <form method="post" action="{{route('app.admin.users.store')}}">
+        <form method="post" action="{{route('admin.users.store')}}">
             @csrf
             @method('post')
                 <div class="form-group">
@@ -43,15 +43,15 @@
             </div>
             <div class="card-footer">
             <button type="submit" class="btn btn-primary">Save</button>
-            <a href="{{route('app.admin.users.index')}}" type="button" class="btn btn-default float-right">Cancel</a>
+            <a href="{{route('admin.users.index')}}" type="button" class="btn btn-default float-right">Cancel</a>
             </div>
         </form>
     </div>
 @stop
 
 @section('footer')
-    Copyright &copy 2024. <a href='/admin'> Jovell's Blog</a>. All rights reserved.
-@endsection
+    Copyright &copy; 2024. <strong>CBRJ Admin</strong>. All rights reserved.
+@stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">

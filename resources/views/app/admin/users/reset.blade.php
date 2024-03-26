@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <div class='card'>
-                <form method="post" action="{{route('app.admin.users.resetOk', $user)}}">
+                <form method="post" action="{{route('admin.users.resetOk', $user)}}">
                     @csrf
                     @method('patch')
                     <div class="card-header">
@@ -21,7 +21,7 @@
                     </div>
                     <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Yes</button>
-                    <a href="{{route('app.admin.users.index')}}" type="button" class="btn btn-default float-right">No</a>
+                    <a href="{{route('admin.users.index')}}" type="button" class="btn btn-default float-right">No</a>
                     </div>
                 </form>
             </div>
@@ -30,8 +30,8 @@
 @stop
 
 @section('footer')
-    Copyright &copy 2024. <a href='/admin'> Jovell's Blog</a>. All rights reserved.
-@endsection
+    Copyright &copy; 2024. <strong>CBRJ Admin</strong>. All rights reserved.
+@stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">

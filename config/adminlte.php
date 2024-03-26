@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'WebBasedTOCMS',
+    'title' => 'WebBasedEOCMS',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => 'WebBased <b>TOCMS</b>',
+    'logo' => 'WebBased <b>EOCMS</b>',
     'logo_img' => 'img/download.jpg',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -314,7 +314,7 @@ return [
 
         [
             'text'        => 'Fees',
-            'url'         => 'app/admin',
+            'url'         => 'app/admin/fees',
             'icon'        => 'nav-icon fas fa-clipboard',
             'label_color' => 'success',
         ],
@@ -327,8 +327,8 @@ return [
         ],
 
         [
-            'text'        => 'Employee-Fees',
-            'url'         => 'app/admin',
+            'text'        => 'EmployeeFees',
+            'url'         => 'app/admin/employeefees',
             'icon'        => 'nav-icon fas fa-users',
             'label_color' => 'success',
         ],
@@ -340,7 +340,6 @@ return [
             'icon' => 'fas fa-fw fa-users',
             'active' => ['app/admin/users', 'app/admin/users/create', 'regex:@^app/admin/users/[0-9]+$@', 'regex:@^app/admin/users/\d+/delete+$@'],
         ],
-        
        
         ['header' => 'account_settings'],
         [

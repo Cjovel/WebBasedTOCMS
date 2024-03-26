@@ -48,8 +48,8 @@
                         <label for="gender">Gender</label>
                         <select name="gender" class="form-control @error('gender') is-invalid @enderror" id="gender" value="{{old('gender')}}">
                             <option value="">--- please select ----</option>
-                            <option value="0" {{old('type') == 0 ? "selected" : ""}}>Male</option>
-                            <option value="1" {{old('type') == 1 ? "selected" : ""}}>Female</option>
+                            <option>Male</option>
+                            <option>Female</option>
                          </select>
                         @error('type')
                             <span class="invalid-feedback" role="alert">
@@ -75,9 +75,9 @@
                         <label for="type">Type</label>
                         <select name="type" class="form-control @error('type') is-invalid @enderror" id="type" value="{{old('type')}}">
                             <option value="">--- please select ----</option>
-                            <option value="0" {{old('type') == 0 ? "selected" : ""}}>Admin</option>
-                            <option value="1" {{old('type') == 1 ? "selected" : ""}}>Teaching</option>
-                            <option value="2" {{old('type') == 2 ? "selected" : ""}}>Non-Teaching</option>
+                            <option>Admin</option>
+                            <option>Teaching</option>
+                            <option>Non-Teaching</option>
                          </select>
                         @error('type')
                             <span class="invalid-feedback" role="alert">

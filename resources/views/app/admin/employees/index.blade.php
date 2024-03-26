@@ -32,7 +32,7 @@
                         <th>Birthdate</th>
                         <th>Type</th>
                         <th>MembershipDate</th>
-                        <th width="15%">Action</th>
+                        <th width="20%">Action</th>
                     </tr>
                 </thead>
                 <tbody>

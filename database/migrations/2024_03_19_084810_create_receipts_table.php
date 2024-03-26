@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('receipts', function (Blueprint $table) {
             $table->id();
-            $table->double('AmountDue');
-            $table->double('AmountPaid');
-            $table->double('Change');
+            $table->String('Shortname');
+            $table->integer('AmountDue');
+            $table->integer('AmountPaid');
+            $table->String('Change');
+            $table->bigInteger('Fee_id');
             $table->timestamps();
         });
     }
